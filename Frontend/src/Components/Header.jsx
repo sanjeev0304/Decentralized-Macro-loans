@@ -56,7 +56,7 @@ const Header = () => {
           <li><Link to="/about">About Us</Link></li>
           <li><Link to="/loans">Loans</Link></li>
           <li><Link to="/working">How It Works</Link></li>
-          <li><Link to="http://127.0.0.1:5000">Risk Calculator</Link></li>
+          <li><Link to="/risk-calculator">Risk Calculator</Link></li>
           <li><Link to="/profile">Profile</Link></li>
           {!Authenticated ? (
             <li>

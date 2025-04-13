@@ -1,0 +1,115 @@
+
+
+.container {
+    max-width: 700px;
+    margin: 100px auto;
+    padding: 2rem;
+    background-color: #14213d;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+/* Form Group Styling */
+.form-group {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form-group label {
+    color: #cdd3df;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.form-group select,
+.form-group input {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #1e2a46;
+    color: #ffffff;
+    font-size: 1rem;
+    outline: none;
+}
+
+.btns {
+    background-color: #7d5fff;
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #af89ff;
+    transform: scale(1.05);
+}
+
+/* Interest Display Styling */
+.interest-display {
+    margin: 1rem 0;
+    font-size: 1rem;
+    color: #afc7f7;
+}
+
+/* Results and Summary Styling */
+#results {
+    margin-top: 2rem;
+    color: #f0f4f8;
+    text-align: left;
+}
+
+#results .summary {
+    background-color: #1e2a46;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+#results h2 {
+    font-size: 1.5rem;
+    color: #7d5fff;
+    margin-bottom: 0.5rem;
+}
+
+#results p {
+    margin: 0.5rem 0;
+}
+
+/* Amortization Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #1e2a46;
+    color: #cdd3df;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table th,
+table td {
+    padding: 0.75rem;
+    text-align: center;
+    border-bottom: 1px solid #24354d;
+}
+
+table th {
+    background-color: #2a3b57;
+    color: #7d5fff;
+}
+
+.error-message {
+    font-size: 0.9rem;
+    color: #ff4f4f;
+    display: none;
+}
+

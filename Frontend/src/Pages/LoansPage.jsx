@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import Header from '../Components/Header';
 import './Loan.css';
 
 const LoansPage = () => {
@@ -66,8 +66,9 @@ const LoansPage = () => {
   };
 
   return (
-    <div className="loan-calculator-container">
+    <div className="loan-calculator">
       <h1>Loan Calculator</h1>
+      <Header />
       <div className="form-group">
         <label htmlFor="loanAmount">Loan Amount (₹):</label>
         <select 
@@ -83,6 +84,7 @@ const LoansPage = () => {
           <option value="100000">100,000</option>
         </select>
       </div>
+      
       <div className="form-group">
         <label htmlFor="loanDuration">Loan Duration (months):</label>
         <select 
@@ -99,9 +101,11 @@ const LoansPage = () => {
           <option value="60">60 months</option>
         </select>
       </div>
+      
       <div className="interest-display">
         Fixed Interest Rate: 2% per annum
       </div>
+      
       <div className="form-group">
         <label htmlFor="upiId">UPI ID:</label>
         <input 
@@ -114,11 +118,12 @@ const LoansPage = () => {
           required 
         />
         {upiError && (
-          <span className="error-message" style={{ display: 'block' }}>
+          <span className="error-message visible">
             Invalid UPI ID! Please enter a valid UPI ID with "@" in the middle (e.g., name@upi).
           </span>
         )}
       </div>
+      
       <div className="form-group">
         <label htmlFor="binanceId">OUR Binance ID:</label>
         <input 
@@ -128,7 +133,8 @@ const LoansPage = () => {
           readOnly 
         />
       </div>
-      <button onClick={calculateLoan}>Calculate Loan</button>
+      
+      <button className='btns' onClick={calculateLoan}>Calculate Loan</button>
 
       {showResults && (
         <div className="results">
