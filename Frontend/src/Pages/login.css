@@ -1,148 +1,134 @@
-/* Login.css - Separate CSS file for login page only */
+/* LoanCalculator.css */
 
-.login-page-wrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
+/* Background and Container Styling */
+.loan-calculator-container {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 2rem;
+  background-color: #14213d;
+  margin-top: 150px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  color: #f0f4f8;
+}
+
+.loan-calculator-container h1 {
+  margin-bottom: 1.5rem;
+  color: #f0f4f8;
+}
+
+/* Form Group Styling */
+.form-group {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form-group label {
+  color: #cdd3df;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.form-group select,
+.form-group input {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #1e2a46;
+  color: #ffffff;
+  font-size: 1rem;
+  outline: none;
+}
+
+.loan-calculator-container button {
+  background-color: #7d5fff;
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.loan-calculator-container button:hover {
+  background-color: #af89ff;
+  transform: scale(1.05);
+}
+
+/* Interest Display Styling */
+.interest-display {
+  margin: 1rem 0;
+  font-size: 1rem;
+  color: #afc7f7;
+}
+
+/* Results and Summary Styling */
+.results {
+  margin-top: 2rem;
+  color: #f0f4f8;
+  text-align: left;
+}
+
+.results .summary {
+  background-color: #1e2a46;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.results h2 {
+  font-size: 1.5rem;
+  color: #7d5fff;
+  margin-bottom: 0.5rem;
+}
+
+.results p {
+  margin: 0.5rem 0;
+}
+
+/* Amortization Table Styling */
+.loan-calculator-container table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #1e2a46;
+  color: #cdd3df;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.loan-calculator-container table th,
+.loan-calculator-container table td {
+  padding: 0.75rem;
+  text-align: center;
+  border-bottom: 1px solid #24354d;
+}
+
+.loan-calculator-container table th {
+  background-color: #2a3b57;
+  color: #7d5fff;
+}
+
+.error-message {
+  font-size: 0.9rem;
+  color: #ff4f4f;
+  display: none;
+}
+
+/* Media Query */
+@media (max-width: 768px) {
+  .loan-calculator-container {
+    padding: 1.5rem;
+    margin: 20px auto;
+  }
+
+  .loan-calculator-container button {
     width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #0a0f1f;
   }
-  
-  .login-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-  }
-  
-  /* Login Container */
-  .login-container {
-    background-color: #10172b;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-    width: 100%;
-    max-width: 400px;
-    text-align: center;
-    animation: loginFadeIn 1s ease;
-  }
-  
-  .login-heading {
-    font-size: 2rem;
-    color: #7d5fff;
-    margin-bottom: 1.5rem;
-  }
-  
-  /* Form Styling */
-  .login-form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .login-input {
-    background-color: #1a2233;
-    color: #f0f4f8;
-    padding: 0.8rem;
-    margin: 0.5rem 0;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    outline: none;
-    transition: border 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .login-input:focus {
-    border: 1px solid #7d5fff;
-    box-shadow: 0 0 5px rgba(125, 95, 255, 0.5);
-  }
-  
-  /* Login Button */
-  .login-button {
-    background-color: #7d5fff;
-    color: #f0f4f8;
-    padding: 0.8rem;
-    border: none;
-    border-radius: 8px;
-    font-size: 1.1rem;
-    margin-top: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-  }
-  
-  .login-button:hover {
-    background-color: #af89ff;
-    transform: scale(1.05);
-  }
-  
-  /* Agreement Links */
-  .login-agreement {
-    margin-top: 1rem;
-    font-size: 0.9rem;
-    color: #cdd3df;
-  }
-  
-  .login-agreement a {
-    color: #5f9ea0;
-    text-decoration: none;
-    margin: 0 0.5rem;
-    transition: color 0.3s ease;
-  }
-  
-  .login-agreement a:hover {
-    color: #7d5fff;
-  }
-  
-  /* Social Account Section */
-  .login-social-account-container {
-    margin-top: 1.5rem;
-  }
-  
-  .login-social-account-container .login-title {
-    display: block;
-    color: #cdd3df;
-    font-size: 0.9rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .login-social-accounts {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-  }
-  
-  .login-social-button {
-    background-color: #1a2233;
-    border-radius: 50%;
-    width: 45px;
-    height: 45px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-  }
-  
-  .login-social-button:hover {
-    background-color: #7d5fff;
-    transform: scale(1.1);
-  }
-  
-  .login-social-button .login-svg {
-    fill: #f0f4f8;
-    transition: fill 0.3s ease;
-  }
-  
-  .login-social-button:hover .login-svg {
-    fill: #af89ff;
-  }
-  
-  /* Animation */
-  @keyframes loginFadeIn {
-    from { opacity: 0; transform: scale(0.9); }
-    to { opacity: 1; transform: scale(1); }
-  }
+}
